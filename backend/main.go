@@ -12,11 +12,11 @@ const (
 )
 
 func serveWs(pool *websocket.Pool, w http.ResponseWriter, r *http.Request) {
-	log.Println("WebSocket endpoint hit")
+	log.Println("WebSocket endpoint hit ")
 	ws, err := websocket.Upgrade(w, r)
 	if err != nil {
 		log.Printf("WebSocket upgrade error: %+v\n", err)
-		http.Error(w, "Could not upgrade to WebSocket", http.StatusInternalServerError)
+		http.Error(w, "Could not upgrade to  WebSocket", http.StatusInternalServerError)
 		return
 	}
 
